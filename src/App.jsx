@@ -6,7 +6,7 @@ import ExamMonitor from './components/ExamMonitor';
 import StrategicResources from './components/StrategicResources';
 import CoreStats from './components/CoreStats';
 import Faculty, { FacultyModal } from './components/Faculty';
-import AILab from './components/AILab';
+import VideoSection from './components/VideoSection'; // 新增视频板块
 import Footer from './components/Footer';
 import SEOContent from './components/SEOContent';
 
@@ -14,7 +14,7 @@ const App = () => {
     const [showFacultyModal, setShowFacultyModal] = useState(false);
 
     return (
-        <div className="relative overflow-hidden font-sans min-h-screen">
+        <div className="relative overflow-hidden font-sans min-h-screen bg-navy-900">
             <FacultyModal isOpen={showFacultyModal} onClose={() => setShowFacultyModal(false)} />
 
             {/* 背景装饰 */}
@@ -26,11 +26,11 @@ const App = () => {
             <Navbar />
             <Hero onShowFaculty={() => setShowFacultyModal(true)} />
             <PowerSection />
+            <VideoSection /> {/* 替换了原来的 AILab */}
             <ExamMonitor />
             <StrategicResources />
             <CoreStats />
             <Faculty onShowModal={() => setShowFacultyModal(true)} />
-            <AILab />
             <Footer />
             <SEOContent />
         </div>
