@@ -3,14 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, X } from 'lucide-react';
 
 const facultyList = [
-    { name: "夏晓华", title: "全国公培行业领军人物 / 二十余年命题人", desc: "亲授2024国考人行全国状元(92分)。二十余年考公命题及阅卷经验，公考面试教父级人物。", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" },
-    { name: "张敏", title: "首席讲师 / 原市委党校教授", desc: "资深面试考官，亲自授课。长期负责孝感处级干部培训，对本地政治理论有教科书级的理解。", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" },
-    { name: "王建国", title: "特级教研员 / 原人社局面试专家", desc: "曾任职于孝感市人社局考试中心，深谙事业单位招聘全流程规则。", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" },
-    { name: "陈思思", title: "高级心理咨询师 / 压力面试专家", desc: "国家二级心理咨询师，专攻考前焦虑与高压环境下的临场应变训练。", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" },
-    { name: "刘志强", title: "资深考官 / 应急应变题型专家", desc: "15年基层政法工作经验，针对公安、司法岗位的实务题有独家解题模型。", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" },
-    { name: "周晓慧", title: "言语理解专家 / 演讲冠军导师", desc: "多次指导学员获得全省演讲比赛金奖，擅长从语言气场上压制对手。", img: "https://images.unsplash.com/photo-1598550832205-d8b552b92139?auto=format&fit=crop&w=400&q=80" },
-    { name: "赵刚", title: "综合分析专家 / 政策解读顾问", desc: "政府研究室特约评论员，能将最新的大政方针转化为高分答题素材。", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" },
-    { name: "吴丽", title: "礼仪形象顾问 / 前空乘教官", desc: "负责考生的进场礼仪、着装搭配及眼神交流训练，打造第一眼“眼缘”。", img: "https://images.unsplash.com/photo-1534751516042-4c860c7b3564?auto=format&fit=crop&w=400&q=80" }
+    { name: "李老师", title: "资深公考讲师", desc: "拥有多年公考笔试教学经验，擅长行测数量关系与资料分析模块，解题技巧独特实用。", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" },
+    { name: "张老师", title: "面试辅导专家", desc: "深耕结构化面试领域，对孝感事业单位面试考情有深入研究，擅长挖掘学员个性化亮点。", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" },
+    { name: "王老师", title: "申论金牌讲师", desc: "理论功底扎实，对申论大作文写作有独到见解，能帮助学员快速构建写作框架。", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" },
+    { name: "陈老师", title: "言语理解讲师", desc: "教学风格风趣幽默，善于将复杂的逻辑填空题简单化，深受学员喜爱。", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" }
 ];
 
 export const FacultyModal = ({ isOpen, onClose }) => {
@@ -32,8 +28,8 @@ export const FacultyModal = ({ isOpen, onClose }) => {
                 >
                     <div className="p-8 border-b border-white/10 flex justify-between items-center bg-navy-900 sticky top-0 z-10">
                         <div>
-                            <h3 className="text-3xl font-serif font-bold text-white">政仕教育专家委员会名录</h3>
-                            <p className="text-gold-500 text-sm tracking-widest uppercase mt-1">Faculty Committee</p>
+                            <h3 className="text-3xl font-serif font-bold text-white">毕上公考师资团队</h3>
+                            <p className="text-gold-500 text-sm tracking-widest uppercase mt-1">Professional Team</p>
                         </div>
                         <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-full transition">
                             <X className="w-8 h-8 text-white" />
@@ -57,9 +53,6 @@ export const FacultyModal = ({ isOpen, onClose }) => {
                             </motion.div>
                         ))}
                     </div>
-                    <div className="p-6 bg-navy-900 border-t border-white/10 text-center text-slate-500 text-sm">
-                        *注：以上专家均为政仕教育（孝感研究院）全职或独家签约专家，严禁其他机构冒用。
-                    </div>
                 </motion.div>
             </motion.div>
         </AnimatePresence>
@@ -71,29 +64,23 @@ const Faculty = ({ onShowModal }) => {
         <section id="faculty" className="py-32 px-8 max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                 <div className="max-w-2xl">
-                    <h2 className="text-4xl font-serif font-bold text-white mb-6 underline decoration-gold-500/30 underline-offset-8">顶尖师资：政仕专家委员会</h2>
-                    <p className="text-slate-400">在政仕，我们拒绝巡讲老师。由全国公培行业领军人物夏晓华教授领衔，资深面试考官亲自授课。</p>
+                    <h2 className="text-4xl font-serif font-bold text-white mb-6 underline decoration-gold-500/30 underline-offset-8">专业师资：助力上岸</h2>
+                    <p className="text-slate-400">毕上公考拥有一支经验丰富、认真负责的师资队伍。我们坚持以学员为中心，提供高质量的教学服务。</p>
                 </div>
                 <button onClick={onShowModal} className="text-gold-500 font-bold flex items-center gap-2">查看完整名录 <ArrowRight className="w-4 h-4" /></button>
             </div>
             
             <div className="grid md:grid-cols-2 gap-12">
-                <div className="group relative rounded-3xl overflow-hidden glass border-white/10">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" className="w-full h-[500px] object-cover opacity-60 group-hover:opacity-100 transition duration-700" alt="夏晓华教授"/>
-                    <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent">
-                        <span className="text-gold-500 text-xs font-bold uppercase tracking-widest mb-2 block">院长 / 全国公培行业领军人物</span>
-                        <h3 className="text-3xl font-bold text-white mb-4">夏晓华 教授</h3>
-                        <p className="text-slate-300 text-sm leading-relaxed">二十余年考公命题人、阅卷人。亲授学员斩获2024国考人行全国状元(92分)。</p>
+                {facultyList.slice(0, 2).map((item, i) => (
+                    <div key={i} className="group relative rounded-3xl overflow-hidden glass border-white/10">
+                        <img src={item.img} className="w-full h-[500px] object-cover opacity-60 group-hover:opacity-100 transition duration-700" alt={item.name}/>
+                        <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent">
+                            <span className="text-gold-500 text-xs font-bold uppercase tracking-widest mb-2 block">{item.title}</span>
+                            <h3 className="text-3xl font-bold text-white mb-4">{item.name}</h3>
+                            <p className="text-slate-300 text-sm leading-relaxed">{item.desc}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="group relative rounded-3xl overflow-hidden glass border-white/10">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" className="w-full h-[500px] object-cover opacity-60 group-hover:opacity-100 transition duration-700" alt="张敏教授"/>
-                    <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent">
-                        <span className="text-gold-500 text-xs font-bold uppercase tracking-widest mb-2 block">首席讲师 / 资深面试考官</span>
-                        <h3 className="text-3xl font-bold text-white mb-4">张敏 女士</h3>
-                        <p className="text-slate-300 text-sm leading-relaxed">资深面试考官亲自授课。擅长高压仿真训练，长期负责孝感处级干部培训。</p>
-                    </div>
-                </div>
+                ))}
             </div>
         </section>
     );

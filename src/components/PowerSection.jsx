@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building2, ShieldCheck, Award } from 'lucide-react';
+import { BookOpen, Users, MapPin } from 'lucide-react';
 
 const PowerSection = () => {
     return (
         <section id="power" className="py-24 px-8 max-w-7xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
                 {[
-                    { title: "二十余年命题阅卷", desc: "由全国公培领军人物夏晓华教授领衔，拥有20余年公务员考试命题及阅卷经验。", icon: ShieldCheck },
-                    { title: "资深考官亲自授课", desc: "拒绝照本宣科。我们的课程均由具有丰富实战经验的资深面试考官亲自讲授。", icon: Building2 },
-                    { title: "上岸夺魁佳绩", desc: "2024国考人行面试92分（全国状元），2025选调生80.76分（全省状元）。", icon: Award }
+                    { title: "本土化教研", desc: "深入研究孝感历年考情，针对性开发面试题本与笔试讲义。", icon: MapPin },
+                    { title: "小班制教学", desc: "坚持小班授课，确保每位学员都能得到老师的一对一指导与点评。", icon: Users },
+                    { title: "全流程服务", desc: "从岗位分析、报名指导到笔面培训、体检政审，全程贴心陪伴。", icon: BookOpen }
                 ].map((item, i) => (
                     <motion.div 
                         whileHover={{ y: -10 }}
